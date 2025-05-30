@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+//import { useState } from 'react'
+//import reactLogo from './assets/react.svg'
+//import viteLogo from '/vite.svg'
 import './App.css'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import SidebarLayout from './components/SidebarLayout'
+import Dashboard from './pages/Dashboard'
+import Goals from './pages/Goals'
+import Budget from './pages/Budget'
 
 function App() {
-  const [count, setCount] = useState(0)
+ // const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
+    <Routes>
+      {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -27,8 +32,17 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
-    </>
+      </p> */}
+      {/* Redirect root to dashboard */}
+      <Route path='/' element={<Navigate to={"/dashboard"}/>}/>
+      {/* Layout wrapper */}
+      <Route element={<SidebarLayout />}>
+      <Route path='/dashboard' element={<Dashboard/>} />
+      <Route path='/budget' element={<Budget/>}/>
+      <Route path='/goals' element={<Goals/>}/>
+      </Route>
+    
+    </Routes>
   )
 }
 

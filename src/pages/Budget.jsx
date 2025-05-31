@@ -35,13 +35,13 @@ export default function Budget() {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">💸 Budget Overview</h2>
+      <h2 className="text-2xl text-gray-500 font-bold mb-4">💸 Budget Overview</h2>
 
       {/* Summary */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         <div className="bg-white p-4 rounded shadow text-center">
           <p className="text-gray-500">Total Budget</p>
-          <p className="text-2xl font-bold">${totalBudget}</p>
+          <p className="text-2xl text-blue-500 font-bold">${totalBudget}</p>
         </div>
         <div className="bg-white p-4 rounded shadow text-center">
           <p className="text-gray-500">Total Spent</p>

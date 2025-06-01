@@ -11,3 +11,4 @@ class Account(Base):
     user_id = Column(Integer, ForeignKey("users.id"))
 
     transactions = relationship("Transaction", back_populates="account")
+    owner = relationship("User", back_populates="accounts")

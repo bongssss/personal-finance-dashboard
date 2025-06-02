@@ -14,7 +14,7 @@ def get_user(db: Session, email: str):
     return db.query(User).filter(User.email == email).first()
 
 
-# --- CONFIGURATIO ---
+# --- CONFIGURAT ---
 SECRET_KEY = "your-secret-key"  #Replace with env var in production
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30

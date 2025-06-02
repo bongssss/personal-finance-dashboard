@@ -15,5 +15,5 @@ def get_accounts(current_user: User = Depends(get_current_user)):
 
 @router.get("/transactions")
 def get_transactions(current_user: User = Depends(get_current_user)):
-    return {"transactions": f"Transactions for user {current_user.email}"}
+    return {"transactions": f"Transactions for users {current_user.email}"}
 

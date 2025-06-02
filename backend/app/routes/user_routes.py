@@ -32,7 +32,7 @@ class UserLogin(BaseModel):
 async def protected_route(token: str = Depends(oauth2_scheme)):
     # Your logic here
     return {"token": token}
-
+#no comment 
 @router.post("/signup")
 def signup(user: UserCreate, db: session = Depends(get_db)):
     existing_user = db.query(User).filter(User.email == user.email).first()

@@ -7,6 +7,9 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import React from 'react';
+import AccountList from '../components/AccountList';
+import TransactionList from '../components/TransactionList';
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
@@ -40,11 +43,15 @@ const options = {
 
 export default function Dashboard() {
   return (
-    <div>
+    <div className="space-y-6 p-6">
       <h2 className="text-2xl font-bold mb-4">📊 Dashboard</h2>
+
       <div className="bg-white p-4 rounded-lg shadow">
         <Bar data={data} options={options} />
       </div>
+
+      <AccountList />
+      <TransactionList />
     </div>
   );
 }

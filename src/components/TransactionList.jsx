@@ -1,31 +1,37 @@
 import React, { useEffect, useState } from 'react';
 import api from '../lib/api';
-import { Card, CardContent } from '@/components/ui/card';
 
-const TransactionList = () => {
+export default function TransactionList() {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
-    api.get('/transactions').then((res) => {
-      setTransactions(res.data);
-    });
+    async function fetchTransactions() {
+      try {
+        const res = await api.get('/transactions');
+        setTransactions(res.data);
+      } catch (err) {
+        console.error('Error fetching transactions:', err);
+      }
+    }
+    fetchTransactions();
   }, []);
 
   return (
-    <div className="space-y-4 mt-8">
-      <h2 className="text-xl font-semibold">Transactions</h2>
-      {transactions.map((tx) => (
-        <Card key={tx.id}>
-          <CardContent className="p-4 flex justify-between">
-            <div>{tx.description}</div>
-            <div className={tx.amount < 0 ? 'text-red-500' : 'text-green-600'}>
-              ${tx.amount.toFixed(2)}
-            </div>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
-  );
-};
+  <div>
+    <h3 className="text-xl font-semibold mb-2">Transactions</h3>
+    <pre className="bg-blue-100 p-4 rounded font-mono">
+      {transactions.map((txn) => {
+        const date = new Date(txn.date).toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric',
+        });
 
-export default TransactionList;
+        const sign = txn.amount < 0 ? '-' : '';
+        const amount = `$${Math.abs(txn.amount).toFixed(2)}`;
+
+        return `${txn.description.padEnd(20)} | ${sign}${amount.padStart(8)} | ${date}\n`;
+      })}
+    </pre>
+  </div>
+);
+}

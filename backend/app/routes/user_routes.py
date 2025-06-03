@@ -50,7 +50,7 @@ def signup(user: UserCreate, db: session = Depends(get_db)):
     return {"message": "User created successfully"}
 
 @router.post("/login")
-#ß@app.post("/login")
+#@app.post("/login")
 def login(form_data: OAuth2PasswordRequestForm = Depends(), db: session = Depends(get_db)):
     user = get_user(db, form_data.username) 
     if not user or not verify_password(form_data.password, user.hashed_password):

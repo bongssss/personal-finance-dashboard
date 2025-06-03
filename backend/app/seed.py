@@ -10,10 +10,10 @@ def seed_data():
     db = SessionLocal()
 
     # Fetch user (you can change this email to a known one)
-    user = db.query(User).filter(User.email == "demo@user.com").first()
+    user = db.query(User).filter(User.email == "ubong@ubong.com").first()
 
     if not user:
-        print("User not found. Please create 'demo@user.com' first.")
+        print("User not found. Please create 'ubong@ubong.com' first.")
         return
 
     # Create mock accounts

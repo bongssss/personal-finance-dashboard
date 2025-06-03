@@ -8,42 +8,25 @@ import Dashboard from './pages/Dashboard'
 import Goals from './pages/Goals'
 import Budget from './pages/Budget'
 
+//import Login from './components/Login' // ⬅ Add this import
+//<Route path="/login" element={<Login />} /> {/*  Add login route */}
+
 function App() {
- // const [count, setCount] = useState(0)
+  //const isLoggedIn = !!localStorage.getItem('token');
 
   return (
     <Routes>
-      {/* <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
-      {/* Redirect root to dashboard */}
-      <Route path='/' element={<Navigate to={"/dashboard"}/>}/>
-      {/* Layout wrapper */}
+      <Route path="/" element={<Navigate to="/dashboard" />} />
+      
+
       <Route element={<SidebarLayout />}>
-      <Route path='/dashboard' element={<Dashboard/>} />
-      <Route path='/budget' element={<Budget/>}/>
-      <Route path='/goals' element={<Goals/>}/>
+        <Route path="/dashboard" element={ <Dashboard /> } />
+        <Route path="/budget" element={ <Budget /> } />
+        <Route path="/goals" element={ <Goals /> } />
       </Route>
-    
     </Routes>
-  )
+  );
 }
+
 
 export default App

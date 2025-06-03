@@ -3,11 +3,23 @@ from app.routes import budget, user_routes
 from app.database import engine, Base
 from app.models import user, account, transaction 
 from fastapi.openapi.utils import get_openapi
+from fastapi.middleware.cors import CORSMiddleware
 
 
 
 app = FastAPI()
+origins = [
+    "http://localhost:5173",  # frontend dev server
+    # "http://127.0.0.1:5173",  # optional fallback
+]
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # or ["*"] for all
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],  # <—— THIS is what you’re missing
+)
 
 def custom_openapi():
     if app.openapi_schema:

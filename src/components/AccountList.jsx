@@ -1,29 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import api from '../lib/api';
-import { Card, CardContent } from '@/components/ui/card';
 
-const AccountList = () => {
+export default function AccountList() {
   const [accounts, setAccounts] = useState([]);
 
   useEffect(() => {
-    api.get('/accounts').then((res) => {
+  async function fetchAccounts() {
+    try {
+      const res = await api.get('/accounts');
+      console.log('✅ Accounts response:', res.data); // Add this
       setAccounts(res.data);
-    });
-  }, []);
+    } catch (err) {
+      console.error(' Error fetching accounts:', err.response || err);
+    }
+  }
+  fetchAccounts();
+}, []);
+
 
   return (
-    <div className="space-y-4">
-      <h2 className="text-xl font-semibold">Accounts</h2>
+  <div>
+    <h3 className="text-xl font-semibold mb-2">Accounts</h3>
+    <pre className="bg-green-100 p-4 rounded font-mono">
       {accounts.map((acc) => (
-        <Card key={acc.id}>
-          <CardContent className="p-4">
-            <div className="font-medium">{acc.name}</div>
-            <div className="text-gray-600">${acc.balance.toFixed(2)}</div>
-          </CardContent>
-        </Card>
+        `${acc.name.padEnd(15)} - $${acc.balance.toFixed(2)}\n`
       ))}
-    </div>
-  );
-};
-
-export default AccountList;
+    </pre>
+  </div>
+);
+}

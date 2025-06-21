@@ -204,7 +204,7 @@ CREATE TABLE budgets (
 - `POST /api/budgets` - Create/update budget
 - `GET /api/budgets/status` - Get budget status (remaining amounts)
 
-## 🎨 UI/UX Design
+## 🎨 UI/Upip X Design
 
 ### Color Scheme
 ```css

@@ -2,9 +2,7 @@
 
 ## 🎯 Project Overview
 
-A modern personal expense tracking web application that helps users manage their finances with intuitive categorization, visual analytics, and budget management. Perfect for showcasing full-stack development skills.
-
-**Time Estimate**: 4 weeks (15 hours/week = 60 total hours)
+A modern personal expense tracking web application that helps users manage their finances with intuitive categorization, visual analytics, and budget management. 
 
 ## 🛠️ Tech Stack
 

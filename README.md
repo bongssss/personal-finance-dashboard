@@ -56,13 +56,11 @@ A modern personal expense tracking web application that helps users manage their
 ```
 frontend/
 ├── .env
-├── .eslint.config.js
-├── .gitignore
+├── eslint.config.js
 ├── index.html
 ├── package.json
 ├── package-lock.json
 ├── postcss.config.js
-├── README.md
 ├── tailwind.config.js
 ├── vite.config.js
 ├── public/

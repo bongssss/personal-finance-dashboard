@@ -55,43 +55,38 @@ A modern personal expense tracking web application that helps users manage their
 ### Frontend Structure
 ```
 frontend/
-├── src/
-│   ├── components/
-│   │   ├── Auth/
-│   │   │   ├── LoginForm.tsx
-│   │   │   ├── RegisterForm.tsx
-│   │   │   └── ProtectedRoute.tsx
-│   │   ├── Dashboard/
-│   │   │   ├── Dashboard.tsx
-│   │   │   ├── ExpenseChart.tsx
-│   │   │   └── BudgetOverview.tsx
-│   │   ├── Expenses/
-│   │   │   ├── ExpenseForm.tsx
-│   │   │   ├── ExpenseList.tsx
-│   │   │   └── ExpenseItem.tsx
-│   │   ├── Layout/
-│   │   │   ├── Header.tsx
-│   │   │   ├── Sidebar.tsx
-│   │   │   └── Layout.tsx
-│   │   └── UI/
-│   │       ├── Button.tsx
-│   │       ├── Input.tsx
-│   │       └── Modal.tsx
-│   ├── contexts/
-│   │   ├── AuthContext.tsx
-│   │   └── ExpenseContext.tsx
-│   ├── hooks/
-│   │   ├── useAuth.ts
-│   │   ├── useExpenses.ts
-│   │   └── useApi.ts
-│   ├── services/
-│   │   └── api.ts
-│   ├── types/
-│   │   └── index.ts
-│   ├── utils/
-│   │   ├── formatters.ts
-│   │   └── constants.ts
-│   └── App.tsx
+├── .env
+├── .eslint.config.js
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+├── vite.config.js
+├── public/
+│   └── (static assets) 
+├── node_modules/
+│   └── (dependencies) 
+└── src/
+    ├── components/
+    │   ├── Auth/
+    │   │   ├── LoginForm.jsx
+    │   │   └── RegisterForm.jsx
+    │   └── Layout/
+    │       ├── Header.jsx
+    │       ├── Sidebar.jsx
+    │       └── Layout.jsx
+    ├── context/
+    │   └── AuthContext.jsx
+    ├── pages/
+    │   ├── Dashboard.jsx
+    │   └── AuthPage.jsx
+    ├── services/
+    │   └── api.js
+    ├── App.jsx
+    └── main.jsx
 ```
 
 ### Backend Structure

@@ -7,7 +7,7 @@ A modern personal expense tracking web application that helps users manage their
 ## 🛠️ Tech Stack
 
 ### Core Technologies
-- **Frontend**: React.js 18 + TypeScript
+- **Frontend**: React.js 18 + Vite
 - **Backend**: FastAPI (Python 3.11+)
 - **Database**: SQLite (simple, no setup required)
 - **Authentication**: Simple JWT (no external provider)

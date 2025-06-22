@@ -1,4 +1,4 @@
-# Personal Expense Tracker - One Month Project
+# Personal Expense Tracker 
 
 ## 🎯 Project Overview
 

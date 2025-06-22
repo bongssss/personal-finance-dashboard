@@ -326,10 +326,12 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install fastapi uvicorn sqlalchemy sqlite3 python-jose[cryptography] passlib[bcrypt] python-multipart
 
 # Setup frontend
-cd .. && npx create-react-app frontend --template typescript
+npm create vite@latest frontend -- --template react
 cd frontend
-npm install axios recharts lucide-react date-fns
+npm install
 npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+npm run dev
 ```
 
 ### Environment Variables

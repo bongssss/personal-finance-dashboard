@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from app.api import auth
 from app.core.database import Base, engine
 from app.api import auth, expenses
+from app.api import analytics
 
 
 
@@ -11,6 +12,7 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 app.include_router(auth.router)
+app.include_router(analytics.router)
 
 app.include_router(auth.router)
 app.include_router(expenses.router)

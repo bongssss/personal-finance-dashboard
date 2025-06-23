@@ -3,7 +3,7 @@ from app.api import auth
 from app.core.database import Base, engine
 from app.api import auth, expenses
 from app.api import analytics
-
+from app.api import budgets
 
 
 
@@ -16,6 +16,9 @@ app.include_router(analytics.router)
 
 app.include_router(auth.router)
 app.include_router(expenses.router)
+app.include_router(budgets.router)
+
+
 
 
 from fastapi.middleware.cors import CORSMiddleware

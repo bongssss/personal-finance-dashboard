@@ -5,6 +5,8 @@ import Dashboard from './pages/Dashboard';
 import Analytics from './pages/Analytics';
 import Expenses from './pages/Expenses';
 import ProtectedRoute from './components/Auth/ProtectedRoute';
+import BudgetsPage from './pages/BudgetsPage';
+
 
 function App() {
   return (
@@ -27,6 +29,10 @@ function App() {
           <Route
             path="/"
             element={<ProtectedRoute><Dashboard /></ProtectedRoute>}
+          />
+          <Route
+          path="/budgets"
+          element={<ProtectedRoute><BudgetsPage /></ProtectedRoute>}
           />
         </Routes>
       </Router>

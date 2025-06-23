@@ -4,7 +4,7 @@ const BudgetItem = ({ budget, onEdit, onDelete }) => {
       <div>
         <p className="font-bold">{budget.category}</p>
         <p className="text-sm text-gray-600">Month: {budget.month}</p>
-        <p className="text-sm text-gray-600">Amount: ${budget.amount.toFixed(2)}</p>
+        <p className="text-sm text-gray-600">Amount: ₦{budget.amount.toFixed(2)}</p>
       </div>
       <div className="space-x-2">
         <button onClick={() => onEdit(budget)} className="px-3 py-1 bg-yellow-400 text-white rounded">

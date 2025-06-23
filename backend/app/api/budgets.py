@@ -1,7 +1,7 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from app.schemas.budget import BudgetCreate, BudgetUpdate, BudgetOut
-from app.services.budget_service import create_budget, get_budgets, update_budget, delete_budget
+from app.services.budget_service import create_budget, get_budgets, update_budget, delete_budget, get_budget_summary
 from app.api.auth import get_current_user
 from app.core.database import SessionLocal
 from app.models.user import User
@@ -37,3 +37,16 @@ def delete(budget_id: int, db: Session = Depends(get_db), current_user: User = D
     if not deleted:
         raise HTTPException(status_code=404, detail="Budget not found")
     return None
+
+
+@router.get("/summary")
+def budget_summary(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+    month: str = Query(..., regex=r"^\d{4}-\d{2}$")
+):
+    return get_budget_summary(db, current_user.id, month)
+    
+
+
+

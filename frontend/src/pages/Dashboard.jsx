@@ -12,12 +12,18 @@ const Dashboard = () => {
 
   return (
     <Layout>
+      <div className="space-y-6"></div>
       <h2 className="text-2xl font-bold">Welcome, {user?.name || user?.email}!</h2>
-      <p className="mt-2 text-gray-600">This is a dashboard of your expenses over the last month.</p>
+      <p className="mt-2 text-gray-600 dark:text-gray-300">This is a dashboard of your expenses over the last month.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+     
   <CategoryPie />
-  <MonthlyTrend />
 </div>  
+<div className="bg-white dark:bg-gray-800 p-6 rounded shadow">
+
+  <MonthlyTrend />
+</div>
+
     </Layout>
   );
 };

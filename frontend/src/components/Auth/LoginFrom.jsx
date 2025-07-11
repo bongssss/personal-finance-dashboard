@@ -10,23 +10,38 @@ const LoginForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-sm mx-auto">
-      <h2 className="text-2xl font-bold">Login</h2>
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-4 max-w-sm w-full bg-white dark:bg-gray-800 p-6 rounded-lg shadow"
+    >
+      <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-100">
+        Login
+      </h2>
+
       <input
         type="email"
-        className="w-full border p-2 rounded"
+        className="w-full border border-gray-300 dark:border-gray-600 p-2 rounded bg-white dark:bg-gray-900 text-sm"
         placeholder="Email"
         value={email}
         onChange={e => setEmail(e.target.value)}
+        required
       />
+
       <input
         type="password"
-        className="w-full border p-2 rounded"
+        className="w-full border border-gray-300 dark:border-gray-600 p-2 rounded bg-white dark:bg-gray-900 text-sm"
         placeholder="Password"
         value={password}
         onChange={e => setPassword(e.target.value)}
+        required
       />
-      <button className="bg-blue-600 text-white px-4 py-2 rounded w-full">Login</button>
+
+      <button
+        type="submit"
+        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full"
+      >
+        Login
+      </button>
     </form>
   );
 };

@@ -33,29 +33,24 @@ const AuthPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 p-6">
-      <div className="space-y-4 text-center">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg w-full max-w-md p-6 space-y-6">
+        <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-100">
+          {isRegistering ? 'Create Account' : 'Login'}
+        </h2>
+
         {isRegistering ? (
-          <>
-            <RegistrationForm onSubmit={handleRegister} />
-            <button
-              onClick={() => setIsRegistering(false)}
-              className="text-sm text-blue-600 dark:text-blue-400 underline"
-            >
-              Already have an account?
-            </button>
-          </>
+          <RegistrationForm onSubmit={handleRegister} />
         ) : (
-          <>
-            <LoginForm onSubmit={handleLogin} />
-            <button
-              onClick={() => setIsRegistering(true)}
-              className="text-sm text-blue-600 dark:text-blue-400 underline"
-            >
-              Create an account
-            </button>
-          </>
+          <LoginForm onSubmit={handleLogin} />
         )}
+
+        <button
+          onClick={() => setIsRegistering(!isRegistering)}
+          className="block text-sm text-blue-600 dark:text-blue-400 underline mx-auto"
+        >
+          {isRegistering ? 'Already have an account?' : 'Create an account'}
+        </button>
       </div>
     </div>
   );

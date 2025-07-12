@@ -11,30 +11,45 @@ const RegisterForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-sm mx-auto">
-      <h2 className="text-2xl font-bold">Register</h2>
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-4 w-full max-w-sm mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow"
+    >
+      
+
       <input
         type="text"
-        className="w-full border p-2 rounded"
+        className="w-full border border-gray-300 dark:border-gray-600 p-2 rounded bg-white dark:bg-gray-900 text-sm"
         placeholder="Name"
         value={name}
         onChange={e => setName(e.target.value)}
+        required
       />
+
       <input
         type="email"
-        className="w-full border p-2 rounded"
+        className="w-full border border-gray-300 dark:border-gray-600 p-2 rounded bg-white dark:bg-gray-900 text-sm"
         placeholder="Email"
         value={email}
         onChange={e => setEmail(e.target.value)}
+        required
       />
+
       <input
         type="password"
-        className="w-full border p-2 rounded"
+        className="w-full border border-gray-300 dark:border-gray-600 p-2 rounded bg-white dark:bg-gray-900 text-sm"
         placeholder="Password"
         value={password}
         onChange={e => setPassword(e.target.value)}
+        required
       />
-      <button className="bg-green-600 text-white px-4 py-2 rounded w-full">Register</button>
+
+      <button
+        type="submit"
+        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded w-full transition"
+      >
+        Register
+      </button>
     </form>
   );
 };

@@ -12,11 +12,9 @@ const LoginForm = ({ onSubmit }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-4 max-w-sm w-full bg-white dark:bg-gray-800 p-6 rounded-lg shadow"
+      className="space-y-4 w-full max-w-sm mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow"
     >
-      <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-100">
-        Login
-      </h2>
+     <div className="bg-red-500 text-white p-4">Test Style</div>
 
       <input
         type="email"
@@ -38,7 +36,7 @@ const LoginForm = ({ onSubmit }) => {
 
       <button
         type="submit"
-        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full"
+        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full transition"
       >
         Login
       </button>

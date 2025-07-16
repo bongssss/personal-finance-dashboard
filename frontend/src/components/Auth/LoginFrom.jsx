@@ -14,8 +14,6 @@ const LoginForm = ({ onSubmit }) => {
       onSubmit={handleSubmit}
       className="space-y-4 w-full max-w-sm mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow"
     >
-     <div className="bg-red-500 text-white p-4">Test Style</div>
-
       <input
         type="email"
         className="w-full border border-gray-300 dark:border-gray-600 p-2 rounded bg-white dark:bg-gray-900 text-sm"

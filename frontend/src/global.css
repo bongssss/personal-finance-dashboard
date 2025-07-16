@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Optional global theme 
+/* Add this at the end: */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   @apply bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100;
-}*/
+}

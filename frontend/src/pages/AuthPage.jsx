@@ -34,8 +34,8 @@ const AuthPage = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg w-full max-w-md p-6 space-y-6">
-        <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-100">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg w-full max-w-md px-8 py-10 space-y-6">
+        <h2 className="text-2xl font-extrabold text-center text-gray-800 dark:text-gray-100">
           {isRegistering ? 'Create Account' : 'Login'}
         </h2>
 
@@ -47,7 +47,7 @@ const AuthPage = () => {
 
         <button
           onClick={() => setIsRegistering(!isRegistering)}
-          className="block text-sm text-blue-600 dark:text-blue-400 underline mx-auto"
+          className="block text-sm text-blue-600 dark:text-blue-400 hover:underline text-center"
         >
           {isRegistering ? 'Already have an account?' : 'Create an account'}
         </button>

@@ -8,7 +8,7 @@ const ThemeToggle = () => {
       onClick={() => setDarkMode(!darkMode)}
       className="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-100 hover:scale-105 transition"
     >
-      {darkMode ? '🌙 Dark' : '☀️ Light'}
+      {darkMode ? '☀️ Light' : '🌙 Dark'}
     </button>
   );
 };

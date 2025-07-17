@@ -24,7 +24,7 @@ const CategoryPie = () => {
 
   return (
     <div className="bg-white p-4 rounded shadow">
-      <h3 className="text-lg font-semibold mb-2">Category Breakdown</h3>
+      <h3 className="text-lg font-semibold mb-2 text-neutral-800">Category Breakdown</h3>
       <ResponsiveContainer width="100%" height={300}>
         <PieChart>
           <Pie

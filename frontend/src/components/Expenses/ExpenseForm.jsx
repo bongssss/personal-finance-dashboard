@@ -47,7 +47,7 @@ const ExpenseForm = ({ onSubmit, initialData = null }) => {
         type="date"
         value={form.expense_date}
         onChange={handleChange}
-        className="w-full border p-2 rounded"
+        className="w-full border p-2 rounded text-neutral-800"
         required
       />
       <input

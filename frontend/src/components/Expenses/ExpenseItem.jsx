@@ -2,7 +2,7 @@ const ExpenseItem = ({ expense, onEdit, onDelete }) => {
   return (
     <div className="flex justify-between items-center bg-white p-4 border rounded shadow-sm">
       <div>
-        <p className="font-semibold text-lg">₦{expense.amount.toFixed(2)}</p>
+        <p className="font-semibold text-lg text-grey-600 dark:text-neutral-800">₦ {expense.amount.toFixed(2)}</p>
         <p className="text-sm text-gray-600">{expense.category} – {expense.description}</p>
         <p className="text-xs text-gray-400">{expense.expense_date}</p>
       </div>

@@ -42,7 +42,7 @@ const BudgetForm = ({ onSubmit, initialData = null }) => {
         name="month"
         value={form.month}
         onChange={handleChange}
-        className="w-full border p-2 rounded"
+        className="w-full border p-2 rounded text-neutral-800"
         required
       />
       <button type="submit" className="bg-blue-600 text-white w-full py-2 rounded">

@@ -1,6 +1,6 @@
 const BudgetItem = ({ budget, onEdit, onDelete }) => {
   return (
-    <div className="flex justify-between items-center bg-gray-100 p-4 rounded shadow-sm">
+    <div className="flex justify-between items-center bg-gray-100 p-4 rounded shadow-sm text-neutral-800">
       <div>
         <p className="font-bold">{budget.category}</p>
         <p className="text-sm text-gray-600">Month: {budget.month}</p>

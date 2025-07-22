@@ -6,18 +6,22 @@ A modern personal expense tracking web application that helps users manage their
 
 ## 🛠️ Tech Stack
 
-### Core Technologies
+### Core Technologies (Frontend)
 - **Frontend**: React.js 18 + Vite
+- **REACT ROUTER V7**
 - **Backend**: FastAPI (Python 3.11+)
 - **Database**: SQLite (simple, no setup required)
 - **Authentication**: Simple JWT (no external provider)
-- **Styling**: Tailwind CSS
+- **Styling**: Tailwind CSS with DaisyUI
 - **State Management**: React Context + useReducer
-- **Charts**: Recharts for visualizations
+- **Charts**: Recharts for visualizations and dashboards
+- **UI and UX enhancement**: Toastify and Headless UI for UX enhancements
+- **React Context API** for state management.
 
 ### Why This Stack?
+- **FastAPI**: FastAPI with Python 3.11
 - **SQLite**: Zero configuration, perfect for development and small projects
-- **JWT Auth**: Simple to implement, no external dependencies
+- **JWT Auth**:JWT-based authentication, Simple to implement, no external dependencies
 - **React Context**: Sufficient for this scale, avoids Redux complexity
 - **Tailwind**: Rapid UI development without custom CSS
 
@@ -43,11 +47,22 @@ A modern personal expense tracking web application that helps users manage their
 
 ### Week 4: Polish & Advanced Features
 - [x] Budget setting and tracking
-- [x] Export data to CSV
+- [x] Export data to pdf
 - [x] Dark/light mode toggle
 - [x] Mobile optimization
 - [x] Basic search and filtering
+- [x] Fully responsive layout (mobile/desktop)
+- [x] Toast notifications on all user actions
+- [x] Confirmation modals for destructive actions
+- [x] Dashboard layout with sidebar, header, and routing
 
+Recent Enhancements
+- [x] Delete and update user support in frontend
+- [x] Confirmation modals for destructive actions (delete user/expense)
+- [x]Toast notifications using react-toastify
+- [x] User context updated via setUser() after profile update
+- [x] LoginForm and RegisterForm restyled for consistency
+- [x] Error fallback and feedback added across forms
 ## 🏗️ File Structure
 
 ### Frontend Structure
@@ -178,6 +193,8 @@ CREATE TABLE budgets (
 - `POST /api/auth/register` - User registration
 - `POST /api/auth/login` - User login
 - `GET /api/auth/me` - Get current user info
+- `PUT /api/auth/me` - Update user
+- `DELETE /api/auth/me` - Delete user
 
 ### Expenses
 - `GET /api/expenses` - Get user expenses (with filtering)
@@ -196,6 +213,15 @@ CREATE TABLE budgets (
 - `GET /api/budgets/status` - Get budget status (remaining amounts)
 
 ## 🎨 UI/Upip X Design
+| Component                    | Description                           |
+| ---------------------------- | ------------------------------------- |
+| `Layout`                     | Shared structure for header + sidebar |
+| `LoginForm` / `RegisterForm` | Modern inputs and buttons             |
+| `Dashboard`                  | Overview stats + charts               |
+| `ExpenseList`                | Table view with edit/delete           |
+| `SettingsPage`               | Update profile + delete account       |
+| `Modals`                     | Confirm destructive actions           |
+| `ToastWrapper`               | Central toast notifications           |
 
 ### Color Scheme
 ```css
@@ -348,17 +374,25 @@ REACT_APP_API_URL=http://localhost:8000
 
 ## 🎯 Success Metrics
 
-By the end of the month, you'll have:
-- ✅ Full-stack application with authentication
-- ✅ CRUD operations for expenses
-- ✅ Visual analytics with charts
-- ✅ Budget tracking system
-- ✅ Responsive, modern UI
-- ✅ RESTful API with documentation
-- ✅ TypeScript for type safety
-- ✅ Mobile-friendly design
+By the end of the project:
+- Full-stack application with authentication
+- CRUD operations for expenses
+- Visual analytics with charts
+- Budget tracking system
+- Responsive, modern UI
+- RESTful API with documentation
+- TypeScript for type safety
+- Mobile-friendly design
+- 🔐 Full user authentication
+- 💸 CRUD expense tracking
+- 📊 Data visualization with charts
+- 🎯 Monthly budgeting
+- 🌗 Responsive light/dark UI
+- Clean code with modals + toast UX
+- 💾 SQLite persistence
+- 📦 RESTful APIs with FastAPI
 
-## 🔄 Future Enhancements (Post-MVP)
+## 🔄 Future Enhancements (hopefully lol)
 
 If you want to continue after the month:
 - Receipt image upload and OCR
@@ -371,7 +405,7 @@ If you want to continue after the month:
 
 ## 💡 Key Learning Outcomes
 
-This project will teach you:
+During this project I learned:
 - **Full-stack development** with modern technologies
 - **API design** and documentation
 - **State management** in React
@@ -381,10 +415,6 @@ This project will teach you:
 - **Responsive design** principles
 - **TypeScript** best practices
 
-Perfect for showcasing in your portfolio and demonstrating real-world development skills!
 
 ---
 
-**Estimated Completion**: 4 weeks at 15 hours/week
-**Difficulty**: Intermediate
-**Portfolio Value**: High

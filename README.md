@@ -59,7 +59,7 @@ A modern personal expense tracking web application that helps users manage their
 Recent Enhancements
 - [x] Delete and update user support in frontend
 - [x] Confirmation modals for destructive actions (delete user/expense)
-- [x]Toast notifications using react-toastify
+- [x] Toast notifications using react-toastify
 - [x] User context updated via setUser() after profile update
 - [x] LoginForm and RegisterForm restyled for consistency
 - [x] Error fallback and feedback added across forms

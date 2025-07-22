@@ -9,10 +9,12 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     if (token) {
-      fetchMe(token).then(setUser).catch(() => {
-        setToken('');
-        localStorage.removeItem('token');
-      });
+      fetchMe(token)
+        .then(setUser)
+        .catch(() => {
+          setToken('');
+          localStorage.removeItem('token');
+        });
     }
   }, [token]);
 
@@ -31,7 +33,9 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, login, logout }}>
+    <AuthContext.Provider
+      value={{ user, token, setUser, setToken, login, logout }}
+    >
       {children}
     </AuthContext.Provider>
   );

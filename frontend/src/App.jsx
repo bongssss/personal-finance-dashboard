@@ -6,6 +6,9 @@ import Analytics from './pages/Analytics';
 import Expenses from './pages/Expenses';
 import ProtectedRoute from './components/Auth/ProtectedRoute';
 import BudgetsPage from './pages/BudgetsPage';
+import UpdateProfile from './pages/UpdateProfile';
+import DeleteAccount from './pages/DeleteProfile';
+
 
 
 function App() {
@@ -33,6 +36,14 @@ function App() {
           <Route
           path="/budgets"
           element={<ProtectedRoute><BudgetsPage /></ProtectedRoute>}
+          />
+          <Route
+          path="/profile/update"
+          element={<ProtectedRoute><UpdateProfile /></ProtectedRoute>}
+          />
+          <Route
+          path="/profile/delete"
+          element={<ProtectedRoute><DeleteAccount /></ProtectedRoute>}
           />
         </Routes>
       </Router>

@@ -26,6 +26,13 @@ const Sidebar = () => {
         <Link to="/budgets" className={getLinkClasses('/budgets')}>
           Budgets
         </Link>
+        <hr className="my-3 border-gray-300 dark:border-gray-600" />
+        <Link to="/profile/update" className="block font-medium text-blue-600 dark:text-blue-400">
+        Update User
+        </Link>
+        <Link to="/profile/delete" className="block font-medium text-red-600 dark:text-red-400">
+        Delete User
+        </Link>
       </nav>
     </aside>
   );

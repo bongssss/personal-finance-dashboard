@@ -66,7 +66,8 @@ Recent Enhancements
 
 ## image(s)
 
-![Expense Tracker webapp Homepage!](./frontend/src/assets/financet.png "Home Page")
+![Expense Tracker webapp Homepage (dark mode)!](./frontend/src/assets/financet.png "Home Page")
+![Expense Tracker webapp Homepage (light mode)!](./frontend/src/assets/expense.png "Home Page")
 ## 🏗️ File Structure
 
 ### Frontend Structure

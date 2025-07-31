@@ -63,6 +63,10 @@ Recent Enhancements
 - [x] User context updated via setUser() after profile update
 - [x] LoginForm and RegisterForm restyled for consistency
 - [x] Error fallback and feedback added across forms
+
+## image(s)
+
+![Movie recommendation webapp Homepage!](/personal-finance-dashboard/frontend/src/assets/financet.pngg "Home Page")
 ## 🏗️ File Structure
 
 ### Frontend Structure

@@ -66,7 +66,7 @@ Recent Enhancements
 
 ## image(s)
 
-![Expense Tracker webapp Homepage!](/personal-finance-dashboard/frontend/src/assets/financet.png "Home Page")
+![Expense Tracker webapp Homepage!](./frontend/src/assets/financet.png "Home Page")
 ## 🏗️ File Structure
 
 ### Frontend Structure

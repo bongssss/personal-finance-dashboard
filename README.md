@@ -66,7 +66,7 @@ Recent Enhancements
 
 ## image(s)
 
-![Movie recommendation webapp Homepage!](/personal-finance-dashboard/frontend/src/assets/financet.pngg "Home Page")
+![Expense Tracker webapp Homepage!](/personal-finance-dashboard/frontend/src/assets/financet.pngg "Home Page")
 ## 🏗️ File Structure
 
 ### Frontend Structure

@@ -1,8 +1,56 @@
 # Python virtual environments
-venv/
-.env/
+venv_clean
 __pycache__/
 *.pyc
 
 # Version manager files (optional)
 .python-version
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Dependency directories
+node_modules/  # (if you have frontend dependencies)
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+
+# macOS files
+.DS_Store
+
+# Testing and coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Local development files
+local_settings.py

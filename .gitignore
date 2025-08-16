@@ -1,6 +1,4 @@
 # Python virtual environments
-venv_clean
-__pycache__/
 *.pyc
 
 # Version manager files (optional)
@@ -10,9 +8,13 @@ __pycache__/
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyo
+*.pyd
+.python-version
+*.log
 
 # Virtual environment
-venv/
+venv_clean/
 .env/
 .venv/
 

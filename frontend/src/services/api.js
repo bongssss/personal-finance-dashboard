@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://personal-finance-dashboard-eq3c.onrender.com';
 
 export async function loginUser(email, password) {
   const res = await fetch(`${API_URL}/api/auth/login`, {

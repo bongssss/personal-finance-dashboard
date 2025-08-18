@@ -320,10 +320,19 @@ CREATE TABLE budgets (
 - Monthly comparison view
 - Responsive chart design
 
-### Week 4 (15 hours)
-**Polish & Advanced Features (15 hours)**
+### Final Stretch (15 hours+)
+**Polish & Advanced Features (15 hours+)**
 - Budget management system
-- Dark/light mode implementation
+- Income page
+- Recurring expense templates
+- Income analytics with monthly income trend chart?
+- severely polished UI (especially in the responsivemess of the Analytics and Dashboard components)
+- Introduce the Menu to the Update and Delete User pages
+- (still on UI polish) Make the menu look stylistically much better, perhaps add a hero button
+- Improve overall webapp smoothness
+- add view password functionaliity 
+- largest single expense on [X] item (Analytics category)
+- Tackle Hosting Problems (A number of them)
 - CSV export functionality
 - Mobile responsive improvements
 - Search and advanced filtering
@@ -399,13 +408,12 @@ By the end of the project:
 
 ## 🔄 Future Enhancements (hopefully lol)
 
-If you want to continue after the month:
 - Income page
 - Recurring expense templates
 - Income analytics with monthly income trend chart?
 - severely polished UI (especially in the responsivemess of the Analytics and Dashboard components)
 - Introduce the Menu to the Update and Delete User pages
-- (still on UI polish) Make the menu look stylistically mush better, perhaps add a hero button
+- (still on UI polish) Make the menu look stylistically much better, perhaps add a hero button
 - Improve overall webapp smoothness
 - add view password functionaliity 
 - largest single expense on [X] item (Analytics category)

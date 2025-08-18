@@ -409,6 +409,7 @@ If you want to continue after the month:
 - Improve overall webapp smoothness
 - add view password functionaliity 
 - largest single expense on [X] item (Analytics category)
+- Tackle Hosting Problems (A number of them)
 ## 💡 Key Learning Outcomes
 
 During this project I learned:

@@ -391,7 +391,7 @@ By the end of the project:
 - 🔐 Full user authentication
 - 💸 CRUD expense tracking
 - 📊 Data visualization with charts
-- 🎯 Monthly budgeting
+- 🎯 Monthly budgeting with income section
 - 🌗 Responsive light/dark UI
 - Clean code with modals + toast UX
 - 💾 SQLite persistence
@@ -400,14 +400,15 @@ By the end of the project:
 ## 🔄 Future Enhancements (hopefully lol)
 
 If you want to continue after the month:
-- Receipt image upload and OCR
+- Income page
 - Recurring expense templates
-- Multi-currency support
-- Bank account integration
-- Sharing expenses with family
-- Advanced reporting
-- Mobile app (React Native)
-
+- Income analytics with monthly income trend chart?
+- severely polished UI (especially in the responsivemess of the Analytics and Dashboard components)
+- Introduce the Menu to the Update and Delete User pages
+- (still on UI polish) Make the menu look stylistically mush better, perhaps add a hero button
+- Improve overall webapp smoothness
+- add view password functionaliity 
+- largest single expense on [X] item (Analytics category)
 ## 💡 Key Learning Outcomes
 
 During this project I learned:

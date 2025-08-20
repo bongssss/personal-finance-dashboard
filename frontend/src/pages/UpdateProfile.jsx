@@ -16,7 +16,7 @@ const UpdateProfile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${API_URL}api/auth/me`, {
+      const res = await fetch(`${API_URL}/api/auth/me`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify(form),

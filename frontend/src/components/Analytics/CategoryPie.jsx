@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useAuth } from '../../context/AuthContext';
+import { API_URL } from '../services/api';
+
 
 const COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#ff7f50', '#00c49f', '#ffbb28'];
 
@@ -10,7 +12,7 @@ const CategoryPie = () => {
 
   useEffect(() => {
     const fetchCategories = async () => {
-      const res = await fetch('http://localhost:8000/api/analytics/categories', {
+      const res = await fetch(`${API_URL}/api/analytics/categories`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const json = await res.json();

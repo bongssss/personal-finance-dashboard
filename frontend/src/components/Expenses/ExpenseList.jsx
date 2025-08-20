@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import ExpenseForm from './ExpenseForm';
 import ExpenseItem from './ExpenseItem';
+import { API_URL } from '../services/api';
 
 const ExpenseList = () => {
   const { token } = useAuth();
@@ -9,7 +10,7 @@ const ExpenseList = () => {
   const [editing, setEditing] = useState(null);
 
   const fetchExpenses = async () => {
-    const res = await fetch('http://localhost:8000/api/expenses', {
+    const res = await fetch(`${API_URL}/api/expenses`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await res.json();
@@ -18,8 +19,8 @@ const ExpenseList = () => {
 
   const handleSubmit = async (data) => {
     const url = editing
-      ? `http://localhost:8000/api/expenses/${editing.id}`
-      : 'http://localhost:8000/api/expenses';
+      ? `${API_URL}/api/expenses/${editing.id}`
+      : `${API_URL}api/expenses`;
 
     const method = editing ? 'PUT' : 'POST';
 
@@ -39,7 +40,7 @@ const ExpenseList = () => {
   };
 
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:8000/api/expenses/${id}`, {
+    await fetch(`${API_URL}/api/expenses/${id}`, {
       method: 'DELETE',
       headers: { Authorization: `Bearer ${token}` },
     });

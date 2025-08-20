@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import BudgetForm from './BudgetForm';
 import BudgetItem from './BudgetItem';
+import { API_URL } from '../services/api';
 
 const BudgetList = () => {
   const { token } = useAuth();
@@ -9,7 +10,7 @@ const BudgetList = () => {
   const [editing, setEditing] = useState(null);
 
   const fetchBudgets = async () => {
-    const res = await fetch('http://localhost:8000/api/budgets', {
+    const res = await fetch(`${API_URL}/api/budgets`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     const json = await res.json();

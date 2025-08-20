@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { useAuth } from '../../context/AuthContext';
+import { API_URL } from '../services/api';
 
 const MonthlyTrend = () => {
   const { token } = useAuth();
@@ -8,7 +9,7 @@ const MonthlyTrend = () => {
 
   useEffect(() => {
     const fetchMonthly = async () => {
-      const res = await fetch('http://localhost:8000/api/analytics/monthly', {
+      const res = await fetch(`${API_URL}/api/analytics/monthly`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const json = await res.json();

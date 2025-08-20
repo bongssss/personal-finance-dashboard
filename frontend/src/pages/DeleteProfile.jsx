@@ -3,6 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import ConfirmModal from '../components/UI/ConfirmationModal';
+import {API_URL} from '../services/api'
 
 const DeleteAccount = () => {
   const { token, logout } = useAuth();
@@ -11,7 +12,7 @@ const DeleteAccount = () => {
 
   const deleteUser = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/auth/me', {
+      const res = await fetch(`${API_URL}/api/auth/me`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
+import { API_URL } from '../services/api';
 
 const BudgetSummary = ({ month }) => {
   const { token } = useAuth();
@@ -7,7 +8,7 @@ const BudgetSummary = ({ month }) => {
 
   useEffect(() => {
     const fetchSummary = async () => {
-      const res = await fetch(`http://localhost:8000/api/budgets/summary?month=${month}`, {
+      const res = await fetch(`${API_URL}/api/budgets/summary?month=${month}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();

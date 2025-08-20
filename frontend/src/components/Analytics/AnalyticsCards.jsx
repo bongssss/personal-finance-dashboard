@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
+import { API_URL } from '../services/api';
+
 
 const AnalyticsCards = () => {
   const { token, user } = useAuth();
   const [summary, setSummary] = useState(null);
+  
 
   useEffect(() => {
     const fetchSummary = async () => {
-      const res = await fetch('http://localhost:8000/api/analytics/summary', {
+      const res = await fetch(`${API_URL}/api/analytics/summary`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();

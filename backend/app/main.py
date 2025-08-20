@@ -27,7 +27,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://personal-finance-dashboard-eight-gray.vercel.app/"],  # You can restrict this to localhost later
+    allow_origins=["*"],  # You can restrict this to localhost later
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

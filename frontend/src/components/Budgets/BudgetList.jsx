@@ -10,7 +10,7 @@ const BudgetList = () => {
   const [editing, setEditing] = useState(null);
 
   const fetchBudgets = async () => {
-    const res = await fetch(`${API_URL}/api/budgets`, {
+    const res = await fetch('http://localhost:8000/api/budgets', {
       headers: { Authorization: `Bearer ${token}` },
     });
     const json = await res.json();

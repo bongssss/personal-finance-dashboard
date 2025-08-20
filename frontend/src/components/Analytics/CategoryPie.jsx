@@ -12,7 +12,7 @@ const CategoryPie = () => {
 
   useEffect(() => {
     const fetchCategories = async () => {
-      const res = await fetch(`${API_URL}/api/analytics/categories`, {
+      const res = await fetch('http://localhost:8000/api/analytics/categories', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const json = await res.json();

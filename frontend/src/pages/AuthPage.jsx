@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import LoginForm from '../components/Auth/LoginFrom';
 import RegistrationForm from '../components/Auth/RegistrationForm';
 import { useAuth } from '../context/AuthContext';
-import {API_URL} from '../services/api'
 
 const AuthPage = () => {
   const [isRegistering, setIsRegistering] = useState(false);
@@ -21,7 +20,7 @@ const AuthPage = () => {
 
   const handleRegister = async (data) => {
     try {
-      const res = await fetch(`${API_URL}/api/auth/register`, {
+      const res = await fetch('http://localhost:8000/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),

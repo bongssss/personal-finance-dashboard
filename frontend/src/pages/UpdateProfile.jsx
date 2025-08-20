@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
 import { Navigate, useNavigate } from 'react-router-dom';
-import {API_URL} from '../services/api'
 
 const UpdateProfile = () => {
   const { user, token, setUser } = useAuth(); // make sure setUser exists in context
@@ -16,7 +15,7 @@ const UpdateProfile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${API_URL}/api/auth/me`, {
+      const res = await fetch('http://localhost:8000/api/auth/me', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify(form),
@@ -24,7 +23,7 @@ const UpdateProfile = () => {
       if (!res.ok) throw new Error('Update failed');
 
       //refetch latest user
-      const fresh = await fetch(`${API_URL}/api/auth/me`, {
+      const fresh = await fetch('http://localhost:8000/api/auth/me', {
         headers: { Authorization: `Bearer ${token}` },
       }).then(r => r.json());
       setUser(fresh);

@@ -20,14 +20,15 @@ venv_clean/
 .venv/
 *.venv/
 venv*/
-# Virtual environments
+# Virtual environments (covers all common naming patterns)
 venv/
 .venv/
 env/
 ENV/
 venv*/
+.venv*/
+env*/
 *.venv/
-venv_*/
 
 # Or even simpler and more comprehensive:
 venv*/

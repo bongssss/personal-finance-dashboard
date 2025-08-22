@@ -1,5 +1,6 @@
 # Python virtual environments
 *.pyc
+.DS_Store
 
 # Version manager files (optional)
 .python-version

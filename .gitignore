@@ -17,6 +17,7 @@ __pycache__/
 venv_clean/
 .env/
 .venv/
+*.venv
 
 # IDE-specific files
 .vscode/
